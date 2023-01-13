@@ -23,8 +23,6 @@ def speech():
     try:
         #Passa a variável para o algoritmo reconhecedor de padroes
         frase = microfone.recognize_google(audio,language='pt-BR')
-        #Retorna a frase pronunciada
-    #Se nao reconheceu o padrao de fala, exibe a mensagem
     except sr.UnkownValueError:
         return False
     return frase
